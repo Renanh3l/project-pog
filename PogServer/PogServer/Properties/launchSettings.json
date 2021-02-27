@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "POG Server": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false,
+      "sqlDebugging": false,
+      "nativeDebugging": false
+    }
+  }
+}

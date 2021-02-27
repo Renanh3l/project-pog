@@ -56,6 +56,9 @@ namespace PogServer
 
                     byte[] _data = new byte[_byteLength];
                     Array.Copy(receiveBuffer, _data, _byteLength);
+
+                    // TODO: handle data
+                    stream.BeginRead(receiveBuffer, 0, dataBufferSize, ReceiveCallback, null);
                 }
                 catch (Exception _ex)
                 {
