@@ -20,5 +20,12 @@ namespace PogServer
             }
             // TODO: send player into game
         }
+
+        public static void UDPTestReceived(int _fromClient, Packet _packet)
+        {
+            string _msg = _packet.ReadString();
+
+            Console.WriteLine($"Received UDP packet. Contains message: {_msg}");
+        }
     }
 }
