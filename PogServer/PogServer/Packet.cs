@@ -20,6 +20,7 @@ namespace PogServer
     public enum ClientPackets
     {
         welcomeReceived = 1,
+        CNewAccount,
         playerMovement
     }
 

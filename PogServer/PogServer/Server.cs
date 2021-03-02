@@ -16,6 +16,7 @@ namespace PogServer
 
         public static TcpListener tcpListener;
         public static UdpClient udpListener;
+        public static Database database;
 
         public static void Start(int _maxPlayers, int _port)
         {
@@ -119,10 +120,15 @@ namespace PogServer
             packetHandlers = new Dictionary<int, PacketHandler>()
             {
                 { (int)ClientPackets.welcomeReceived, ServerHandle.WelcomeReceived },
+                { (int)ClientPackets.CNewAccount, ServerHandle.NewAccount },
                 { (int)ClientPackets.playerMovement, ServerHandle.PlayerMovement },
             };
 
             Console.WriteLine("Initialized packets.");
+
+            database = new Database();
+
+            Console.WriteLine("Initialized database.");
         }
     }
 }

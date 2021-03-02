@@ -22,6 +22,11 @@ namespace PogServer
             Server.clients[_fromClient].SendIntoGame(_username);
         }
 
+        public static void NewAccount(int _fromClient, Packet _packet)
+        {
+
+        }
+
         public static void PlayerMovement(int _fromClient, Packet _packet)
         {
             bool[] _inputs = new bool[_packet.ReadInt()];
